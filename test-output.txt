@@ -1,0 +1,359 @@
+
+> dummy-ecommerce@0.1.0 test:e2e
+> playwright test
+
+
+Running 58 tests using 6 workers
+
+[1A[2K(node:86642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86647) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86645) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86646) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86643) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86646) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86643) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86647) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86645) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[1/58] [chromium] › e2e/cart-operations.spec.js:51:2 › Cart Operations › should navigate to cart page
+[1A[2K[2/58] [chromium] › e2e/cart-operations.spec.js:30:2 › Cart Operations › should add item to cart from product detail page
+[1A[2K[3/58] [chromium] › e2e/cart-operations.spec.js:77:2 › Cart Operations › should have "Go shopping" link that redirects to shop
+[1A[2K[4/58] [chromium] › e2e/cart-operations.spec.js:9:2 › Cart Operations › should add item to cart from product listing
+[1A[2K[5/58] [chromium] › e2e/cart-operations.spec.js:68:2 › Cart Operations › should show placeholder image in empty cart
+[1A[2K[6/58] [chromium] › e2e/cart-operations.spec.js:57:2 › Cart Operations › should show empty cart message initially
+[1A[2K[7/58] [chromium] › e2e/cart-operations.spec.js:87:2 › Cart Operations › should allow clicking multiple add to cart buttons
+[1A[2K[8/58] [chromium] › e2e/cart-operations.spec.js:103:2 › Cart Operations › should maintain add to cart functionality after page reload
+[1A[2K[9/58] [chromium] › e2e/cart-operations.spec.js:122:2 › Cart Operations › should display product prices in shop
+[1A[2K[10/58] [chromium] › e2e/cart-verification.spec.js:9:2 › Cart Verification - Customer-Facing Outcomes › should show products are available for purchase
+[1A[2K[11/58] [chromium] › e2e/cart-verification.spec.js:22:2 › Cart Verification - Customer-Facing Outcomes › should allow customer to click add to cart without errors
+[1A[2K[12/58] [chromium] › e2e/cart-verification.spec.js:39:2 › Cart Verification - Customer-Facing Outcomes › should allow customer to navigate to cart after adding item
+[1A[2K[13/58] [chromium] › e2e/cart-verification.spec.js:54:2 › Cart Verification - Customer-Facing Outcomes › should display cart page structure correctly
+[1A[2K[14/58] [chromium] › e2e/cart-verification.spec.js:74:2 › Cart Verification - Customer-Facing Outcomes › should show product information to help customer decide
+[1A[2K[15/58] [chromium] › e2e/cart-verification.spec.js:93:2 › Cart Verification - Customer-Facing Outcomes › should allow customer to view product details before adding to cart
+[1A[2K[16/58] [chromium] › e2e/cart-verification.spec.js:126:2 › Cart Verification - Customer-Facing Outcomes › should provide clear call-to-action when cart is empty
+[1A[2K[17/58] [chromium] › e2e/cart-verification.spec.js:112:2 › Cart Verification - Customer-Facing Outcomes › should show related products to help customer discover more items
+[1A[2K[18/58] [chromium] › e2e/cart-verification.spec.js:142:2 › Cart Verification - Customer-Facing Outcomes › should show product prices clearly for customer budgeting
+[1A[2K  1) [chromium] › e2e/cart-verification.spec.js:74:2 › Cart Verification - Customer-Facing Outcomes › should show product information to help customer decide 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+      78 | 		// Should see product name/title
+      79 | 		const productText = await firstProduct.textContent();
+    > 80 | 		expect(productText.length).toBeGreaterThan(0);
+         | 		                           ^
+      81 | 		
+      82 | 		// Should see prices on page
+      83 | 		const bodyText = await page.textContent('body');
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/cart-verification.spec.js:80:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/cart-verification-Cart-Ver-7f3f0-ion-to-help-customer-decide-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/cart-verification-Cart-Ver-7f3f0-ion-to-help-customer-decide-chromium/error-context.md
+
+
+[1A[2K[19/58] [chromium] › e2e/complete-shopping-flow.spec.js:4:2 › Complete Shopping Flow › should complete full shopping journey from homepage to shop
+[1A[2K(node:86955) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[20/58] [chromium] › e2e/complete-shopping-flow.spec.js:42:2 › Complete Shopping Flow › should use Shop Now button from homepage
+[1A[2K[21/58] [chromium] › e2e/complete-shopping-flow.spec.js:57:2 › Complete Shopping Flow › should navigate between pages maintaining functionality
+[1A[2K  2) [chromium] › e2e/cart-verification.spec.js:93:2 › Cart Verification - Customer-Facing Outcomes › should allow customer to view product details before adding to cart 
+
+    Error: expect.toBeVisible: Error: strict mode violation: getByText(/product description/i) resolved to 2 elements:
+        1) <strong>Product Description</strong> aka getByRole('heading', { name: 'Product Description' }).getByRole('strong')
+        2) <strong>Product Description</strong> aka getByText('Product Description').nth(1)
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText(/product description/i)[22m
+
+
+       98 | 		// Should see detailed product information
+       99 | 		await expect(page.locator('h1').first()).toBeVisible();
+    > 100 | 		await expect(page.getByText(/product description/i)).toBeVisible();
+          | 		                                                     ^
+      101 | 		
+      102 | 		// Should see stock information
+      103 | 		const pageText = await page.textContent('body');
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/cart-verification.spec.js:100:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/cart-verification-Cart-Ver-1a98f-tails-before-adding-to-cart-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/cart-verification-Cart-Ver-1a98f-tails-before-adding-to-cart-chromium/error-context.md
+
+
+[1A[2K(node:86955) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:86961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[22/58] [chromium] › e2e/cart-verification.spec.js:157:2 › Cart Verification - Customer-Facing Outcomes › should allow customer to search and filter to find desired products
+[1A[2K(node:86961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[23/58] [chromium] › e2e/complete-shopping-flow.spec.js:79:2 › Complete Shopping Flow › should search for product and view details
+[1A[2K[24/58] [chromium] › e2e/complete-shopping-flow.spec.js:100:2 › Complete Shopping Flow › should filter by price and add item
+[1A[2K  3) [chromium] › e2e/complete-shopping-flow.spec.js:4:2 › Complete Shopping Flow › should complete full shopping journey from homepage to shop 
+
+    Error: expect.toBeVisible: Error: strict mode violation: getByText(/product description/i) resolved to 2 elements:
+        1) <strong>Product Description</strong> aka getByRole('heading', { name: 'Product Description' }).getByRole('strong')
+        2) <strong>Product Description</strong> aka getByText('Product Description').nth(1)
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText(/product description/i)[22m
+
+
+      28 | 		// 7. Verify product details page
+      29 | 		await expect(page.locator('h1').first()).toBeVisible();
+    > 30 | 		await expect(page.getByText(/product description/i)).toBeVisible();
+         | 		                                                     ^
+      31 | 		
+      32 | 		// 8. Add to cart
+      33 | 		const addButton = page.getByRole('button', { name: /add to cart/i });
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/complete-shopping-flow.spec.js:30:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/complete-shopping-flow-Com-77b27-urney-from-homepage-to-shop-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/complete-shopping-flow-Com-77b27-urney-from-homepage-to-shop-chromium/error-context.md
+
+
+[1A[2K[25/58] [chromium] › e2e/complete-shopping-flow.spec.js:145:2 › Complete Shopping Flow › should display correct page title on all pages
+[1A[2K(node:87058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:87058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[26/58] [chromium] › e2e/complete-shopping-flow.spec.js:128:2 › Complete Shopping Flow › should view related products from product detail page
+[1A[2K[27/58] [chromium] › e2e/complete-shopping-flow.spec.js:159:2 › Complete Shopping Flow › should have consistent header across all pages
+[1A[2K[28/58] [chromium] › e2e/complete-shopping-flow.spec.js:177:2 › Complete Shopping Flow › should have consistent footer across all pages
+[1A[2K[29/58] [chromium] › e2e/complete-shopping-flow.spec.js:192:2 › Complete Shopping Flow › should handle rapid navigation without errors
+[1A[2K[30/58] [chromium] › e2e/homepage-navigation.spec.js:8:2 › Homepage and Navigation › should load homepage successfully
+[1A[2K[31/58] [chromium] › e2e/homepage-navigation.spec.js:16:2 › Homepage and Navigation › should display header with logo and navigation
+[1A[2K  4) [chromium] › e2e/complete-shopping-flow.spec.js:159:2 › Complete Shopping Flow › should have consistent header across all pages 
+
+    Error: expect.toBeVisible: Error: strict mode violation: getByRole('link', { name: /shop/i }) resolved to 2 elements:
+        1) <a href="/shop">…</a> aka getByRole('link', { name: 'Shop Shop' })
+        2) <a href="/shop">Go shopping</a> aka getByRole('link', { name: 'Go shopping' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('link', { name: /shop/i })[22m
+
+
+      172 | 		await page.goto('/cart');
+      173 | 		await expect(page.locator('img[alt*="logo"]').first()).toBeAttached();
+    > 174 | 		await expect(page.getByRole('link', { name: /shop/i })).toBeVisible();
+          | 		                                                        ^
+      175 | 	});
+      176 |
+      177 | 	test('should have consistent footer across all pages', async ({ page }) => {
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/complete-shopping-flow.spec.js:174:59
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/complete-shopping-flow-Com-b7706-ent-header-across-all-pages-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/complete-shopping-flow-Com-b7706-ent-header-across-all-pages-chromium/error-context.md
+
+
+[1A[2K(node:87135) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[32/58] [chromium] › e2e/homepage-navigation.spec.js:34:2 › Homepage and Navigation › should navigate to cart page
+[1A[2K(node:87135) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[33/58] [chromium] › e2e/homepage-navigation.spec.js:24:2 › Homepage and Navigation › should navigate to shop page
+[1A[2K[34/58] [chromium] › e2e/homepage-navigation.spec.js:41:2 › Homepage and Navigation › should show empty cart initially
+[1A[2K[35/58] [chromium] › e2e/homepage-navigation.spec.js:48:2 › Homepage and Navigation › should display footer
+[1A[2K[36/58] [chromium] › e2e/homepage-navigation.spec.js:56:2 › Homepage and Navigation › should have working logo link to homepage
+[1A[2K[37/58] [chromium] › e2e/product-browsing.spec.js:10:2 › Product Browsing and Details › should display product list in shop
+[1A[2K[38/58] [chromium] › e2e/product-browsing.spec.js:19:2 › Product Browsing and Details › should display product information on cards
+[1A[2K[39/58] [chromium] › e2e/product-browsing.spec.js:32:2 › Product Browsing and Details › should navigate to product details page
+[1A[2K[40/58] [chromium] › e2e/product-browsing.spec.js:41:2 › Product Browsing and Details › should display full product details on detail page
+[1A[2K  5) [chromium] › e2e/complete-shopping-flow.spec.js:192:2 › Complete Shopping Flow › should handle rapid navigation without errors 
+
+    TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('a[href="/"]').first() to be visible[22m
+    [2m    15 × locator resolved to hidden <a href="/" class="sc-dicizt hfTRhB">…</a>[22m
+
+
+      201 | 		
+      202 | 		const homeLink = page.locator('a[href="/"]').first();
+    > 203 | 		await homeLink.waitFor({ state: 'visible', timeout: 5000 });
+          | 		               ^
+      204 | 		await homeLink.click();
+      205 | 		await page.waitForURL(/^\//);
+      206 | 		
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/complete-shopping-flow.spec.js:203:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/complete-shopping-flow-Com-3b138-d-navigation-without-errors-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/complete-shopping-flow-Com-3b138-d-navigation-without-errors-chromium/error-context.md
+
+
+[1A[2K[41/58] [chromium] › e2e/product-browsing.spec.js:70:2 › Product Browsing and Details › should show related products on detail page
+[1A[2K(node:87243) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[42/58] [chromium] › e2e/product-browsing.spec.js:79:2 › Product Browsing and Details › should be able to navigate back to shop from product page
+[1A[2K(node:87243) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[43/58] [chromium] › e2e/product-browsing.spec.js:60:2 › Product Browsing and Details › should have add to cart button on product detail page
+[1A[2K[44/58] [chromium] › e2e/product-browsing.spec.js:94:2 › Product Browsing and Details › should display product rating on cards
+[1A[2K  6) [chromium] › e2e/homepage-navigation.spec.js:56:2 › Homepage and Navigation › should have working logo link to homepage 
+
+    TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('a[href="/"]').first() to be visible[22m
+    [2m    15 × locator resolved to hidden <a href="/" class="sc-dicizt hfTRhB">…</a>[22m
+
+
+      61 | 		// Wait for logo link to be clickable, then click
+      62 | 		const logoLink = page.locator('a[href="/"]').first();
+    > 63 | 		await logoLink.waitFor({ state: 'visible', timeout: 5000 });
+         | 		               ^
+      64 | 		await logoLink.click();
+      65 | 		await expect(page).toHaveURL(/^.*\/$/);
+      66 | 	});
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/homepage-navigation.spec.js:63:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/homepage-navigation-Homepa-930f8-rking-logo-link-to-homepage-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/homepage-navigation-Homepa-930f8-rking-logo-link-to-homepage-chromium/error-context.md
+
+
+[1A[2K(node:87302) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:87302) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[45/58] [chromium] › e2e/product-browsing.spec.js:100:2 › Product Browsing and Details › should display discount information
+[1A[2K  7) [chromium] › e2e/product-browsing.spec.js:41:2 › Product Browsing and Details › should display full product details on detail page 
+
+    Error: expect.toBeVisible: Error: strict mode violation: getByText(/product description/i) resolved to 2 elements:
+        1) <strong>Product Description</strong> aka getByRole('heading', { name: 'Product Description' }).getByRole('strong')
+        2) <strong>Product Description</strong> aka getByText('Product Description').nth(1)
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText(/product description/i)[22m
+
+
+      51 | 		
+      52 | 		// Check for product description
+    > 53 | 		await expect(page.getByText(/product description/i)).toBeVisible();
+         | 		                                                     ^
+      54 | 		
+      55 | 		// Check for price
+      56 | 		const pageText = await page.textContent('body');
+        at /Users/jamessun/Developer/GitHub/dummy-ecommerce/e2e/product-browsing.spec.js:53:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/product-browsing-Product-B-7f70c-duct-details-on-detail-page-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/product-browsing-Product-B-7f70c-duct-details-on-detail-page-chromium/error-context.md
+
+
+[1A[2K(node:87329) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:87329) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[46/58] [chromium] › e2e/search-and-filters.spec.js:9:2 › Search and Filter Functionality › should have search input field visible
+[1A[2K[47/58] [chromium] › e2e/search-and-filters.spec.js:15:2 › Search and Filter Functionality › should filter products by search term
+[1A[2K[48/58] [chromium] › e2e/search-and-filters.spec.js:29:2 › Search and Filter Functionality › should clear search and show all products
+[1A[2K[49/58] [chromium] › e2e/search-and-filters.spec.js:46:2 › Search and Filter Functionality › should have category filter dropdown
+[1A[2K[50/58] [chromium] › e2e/search-and-filters.spec.js:52:2 › Search and Filter Functionality › should have price range filter
+[1A[2K[51/58] [chromium] › e2e/search-and-filters.spec.js:61:2 › Search and Filter Functionality › should filter products by price range
+[1A[2K[52/58] [chromium] › e2e/search-and-filters.spec.js:75:2 › Search and Filter Functionality › should have order by dropdown
+[1A[2K[53/58] [chromium] › e2e/search-and-filters.spec.js:81:2 › Search and Filter Functionality › should have sort order toggle (Descending/Ascending)
+[1A[2K[54/58] [chromium] › e2e/search-and-filters.spec.js:87:2 › Search and Filter Functionality › should allow typing in search field
+[1A[2K[55/58] [chromium] › e2e/search-and-filters.spec.js:97:2 › Search and Filter Functionality › should allow typing in min price field
+[1A[2K[56/58] [chromium] › e2e/search-and-filters.spec.js:107:2 › Search and Filter Functionality › should allow typing in max price field
+[1A[2K[57/58] [chromium] › e2e/search-and-filters.spec.js:117:2 › Search and Filter Functionality › should display filter options section
+[1A[2K[58/58] [chromium] › e2e/search-and-filters.spec.js:125:2 › Search and Filter Functionality › should search for specific product type
+[1A[2K  7 failed
+    [chromium] › e2e/cart-verification.spec.js:74:2 › Cart Verification - Customer-Facing Outcomes › should show product information to help customer decide 
+    [chromium] › e2e/cart-verification.spec.js:93:2 › Cart Verification - Customer-Facing Outcomes › should allow customer to view product details before adding to cart 
+    [chromium] › e2e/complete-shopping-flow.spec.js:4:2 › Complete Shopping Flow › should complete full shopping journey from homepage to shop 
+    [chromium] › e2e/complete-shopping-flow.spec.js:159:2 › Complete Shopping Flow › should have consistent header across all pages 
+    [chromium] › e2e/complete-shopping-flow.spec.js:192:2 › Complete Shopping Flow › should handle rapid navigation without errors 
+    [chromium] › e2e/homepage-navigation.spec.js:56:2 › Homepage and Navigation › should have working logo link to homepage 
+    [chromium] › e2e/product-browsing.spec.js:41:2 › Product Browsing and Details › should display full product details on detail page 
+  51 passed (41.3s)
+
+  Serving HTML report at http://localhost:55125. Press Ctrl+C to quit.
