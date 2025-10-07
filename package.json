@@ -68,7 +68,8 @@
 					"src/components/**",
 					"src/App*",
 					"src/views/**",
-					"src/route/**"
+					"src/route/**",
+					"src/contexts/**"
 				],
 				"rules": {
 					"max-lines-per-function": [

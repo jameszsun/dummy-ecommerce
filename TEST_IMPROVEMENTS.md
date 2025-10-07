@@ -201,3 +201,5 @@ Remaining failures are due to actual app issues (cart persistence, duplicate h1 
 
 *Tests now focus on what customers actually experience, not internal implementation details.*
 
+
+

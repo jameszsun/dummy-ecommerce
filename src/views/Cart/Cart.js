@@ -84,6 +84,7 @@ export default function Cart(props) {
 								<Checkout
 									totalCost={totalCost}
 									getTotalItems={getTotalItems}
+									cart={cart}
 								/>
 							</Grid.Column>
 							<Grid.Column
@@ -95,6 +96,7 @@ export default function Cart(props) {
 								<Checkout
 									totalCost={totalCost}
 									getTotalItems={getTotalItems}
+									cart={cart}
 								/>
 							</Grid.Column>
 						</Grid.Row>

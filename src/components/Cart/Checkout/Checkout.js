@@ -1,5 +1,8 @@
-import { Button, Header, Segment } from 'semantic-ui-react';
+import { useState } from 'react';
+import { Button, Header, Segment, Message } from 'semantic-ui-react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useAuth } from '../../../contexts/AuthContext';
 
 const StyledCheckout = styled(Segment)`
 	display: flex;
@@ -27,7 +30,52 @@ export const ItemCount = styled.div`
 color: gray;
 font-weight: 300;
 `
-export default function Checkout({ totalCost, getTotalItems }) {
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
+export default function Checkout({ totalCost, getTotalItems, cart }) {
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState('');
+	const { user, token } = useAuth();
+	const navigate = useNavigate();
+
+	const handleCheckout = async () => {
+		if (!user) {
+			navigate('/login');
+			return;
+		}
+
+		if (!cart || cart.length === 0) {
+			setError('Your cart is empty');
+			return;
+		}
+
+		setLoading(true);
+		setError('');
+
+		try {
+			const response = await fetch(`${API_URL}/api/checkout/create-session`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Authorization': `Bearer ${token}`,
+				},
+				body: JSON.stringify({ cartItems: cart }),
+			});
+
+			if (!response.ok) {
+				const data = await response.json();
+				throw new Error(data.error || 'Failed to create checkout session');
+			}
+
+			const { url } = await response.json();
+			window.location.href = url;
+		} catch (err) {
+			setError(err.message);
+			setLoading(false);
+		}
+	};
+
 	return (
 		<StyledCheckout>
 			<Header>Estimated Costs</Header>
@@ -48,8 +96,9 @@ export default function Checkout({ totalCost, getTotalItems }) {
 					</strong>
 				</dd>
 			</dl>
-			<Button>
-				Continue to checkout
+			{error && <Message error content={error} />}
+			<Button primary loading={loading} onClick={handleCheckout}>
+				{user ? 'Continue to checkout' : 'Login to checkout'}
 			</Button>
 		</StyledCheckout>
 	)
